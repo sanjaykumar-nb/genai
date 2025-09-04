@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegalEase AI - Simplify Your Legal Documents</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>LegalEase AI 📜✨</h1>
+        <p>Your AI-powered assistant for understanding legal documents in plain English.</p>
+    </header>
+
+    <main>
+        <div class="upload-section">
+            <label for="pdf-upload" class="upload-label">Upload Your Legal Document (PDF)</label>
+            <input type="file" id="pdf-upload" accept=".pdf">
+        </div>
+
+        <div id="status-message" class="status"></div>
+
+        <div class="results-container" id="results-container">
+            <div class="result-box" id="financial-section">
+                <h2>💰 Financial Commitment Summary</h2>
+                <div id="financial-content"></div>
+            </div>
+
+            <div class="result-box" id="summary-section">
+                <h2>✅ Key Issues Summary</h2>
+                <div id="key-points-content"></div>
+            </div>
+            
+            <div class="result-box" id="risks-section">
+                <h2>🔍 Loopholes & Ambiguities</h2>
+                <div id="risks-content"></div>
+            </div>
+
+            <div class="result-box" id="citations-section">
+                <h2>⚖️ Relevant Legal Sections</h2>
+                <div id="citations-content"></div>
+            </div>
+
+            <div class="side-by-side-container">
+                <div class="document-pane">
+                    <h3>Original Text</h3>
+                    <pre id="original-text-content"></pre>
+                </div>
+                <div class="document-pane">
+                    <h3>Simplified Version</h3>
+                    <div id="simplified-text-content" class="simplified-text-display"></div>
+                </div>
+            </div>
+
+            <div class="result-box" id="qa-section">
+                <h2>Ask a Specific Question 💬</h2>
+                <div class="qa-input-container">
+                    <input type="text" id="qa-input" placeholder="e.g., 'What is the notice period for ending the lease?'">
+                    <button id="ask-button">Ask</button>
+                </div>
+                <div id="qa-answer" class="qa-answer-box"></div>
+            </div>
+
+            <div class="result-box" id="compare-section">
+                <h2>⚖️ Compare a Clause</h2>
+                <p>Paste a single clause below to see how it compares to a standard, fair version.</p>
+                <textarea id="clause-input" placeholder="e.g., 'The tenant shall be responsible for all repairs, major or minor...'"></textarea>
+                <button id="compare-button">Compare Clause</button>
+                <div id="clause-comparison" class="qa-answer-box"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Built for the Hackathon | Privacy-First: Your documents are never stored or saved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

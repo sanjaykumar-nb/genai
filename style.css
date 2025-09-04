@@ -1,0 +1,79 @@
+/* Basic Setup & Fonts */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+header h1 { color: #1a2a4c; }
+
+/* Main Content Area */
+main { max-width: 1200px; margin: 0 auto; }
+
+/* File Upload Section */
+.upload-section {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+    margin-bottom: 30px;
+}
+.upload-label { display: block; font-size: 1.2em; font-weight: 600; margin-bottom: 15px; color: #1a2a4c; }
+input[type="file"] { border: 2px dashed #ccc; padding: 20px; width: 80%; border-radius: 8px; cursor: pointer; transition: all 0.2s ease-in-out; }
+input[type="file"]:hover { border-color: #007bff; background-color: #f8f9fa; }
+
+/* Status Messages (for loading/errors) */
+.status { text-align: center; font-size: 1.1em; padding: 15px; margin-bottom: 20px; border-radius: 6px; display: none; }
+.status.processing { background-color: #e0e7ff; color: #3730a3; display: block; }
+.status.error { background-color: #ffe4e6; color: #be123c; display: block; }
+.status.success { background-color: #dcfce7; color: #166534; display: block; }
+
+/* Results Containers */
+.results-container { display: none; }
+.result-box { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 25px; }
+.result-box h2 { margin-top: 0; color: #1a2a4c; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+
+/* Side-by-Side View for Document Text */
+.side-by-side-container { display: flex; gap: 20px; }
+.document-pane { flex: 1; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.document-pane h3 { margin-top: 0; }
+pre { white-space: pre-wrap; word-wrap: break-word; background-color: #f8f9fa; padding: 15px; border-radius: 6px; border: 1px solid #eee; max-height: 400px; overflow-y: auto; }
+
+/* ENHANCED STYLES from previous step */
+.simplified-text-display { white-space: pre-wrap; word-wrap: break-word; background-color: #f8fcfc; padding: 18px; border-radius: 8px; border: 1px solid #e0e6eb; max-height: 400px; overflow-y: auto; font-family: Georgia, serif; font-size: 1.05em; line-height: 1.8; color: #2c3e50; }
+#key-points-content ul, #risks-content ul, #citations-content ul, #financial-content ul { list-style: none; padding: 0; margin: 0; }
+#key-points-content li { background-color: #e6f7ff; border-left: 5px solid #007bff; padding: 10px 15px; margin-bottom: 8px; border-radius: 4px; font-size: 0.95em; color: #1a5e95; position: relative; padding-left: 35px; }
+#key-points-content li::before { content: '✅'; position: absolute; left: 10px; color: #007bff; font-size: 1.1em; top: 50%; transform: translateY(-50%); }
+#risks-content li { background-color: #fff0f5; border-left: 5px solid #dc3545; padding: 10px 15px; margin-bottom: 8px; border-radius: 4px; font-size: 0.95em; color: #8c0c1e; position: relative; padding-left: 35px; }
+#risks-content li::before { content: '🔍'; position: absolute; left: 10px; font-size: 1.1em; top: 50%; transform: translateY(-50%); }
+#risks-content li strong { color: #a71d2a; font-weight: 700; }
+#citations-content li { background-color: #f0f4f8; border-left: 5px solid #5a67d8; padding: 10px 15px; margin-bottom: 8px; border-radius: 4px; font-size: 0.95em; color: #2c3e50; }
+#citations-content li strong { color: #434190; font-weight: 700; }
+#financial-content li { background-color: #f0f9ff; border-left: 5px solid #0ea5e9; padding: 10px 15px; margin-bottom: 8px; border-radius: 4px; }
+
+/* Q&A and Clause Comparison Styling */
+.qa-input-container { display: flex; gap: 10px; margin-bottom: 15px; }
+#qa-input { flex-grow: 1; border: 1px solid #ccc; padding: 10px; font-size: 1em; border-radius: 6px; }
+#ask-button { padding: 10px 20px; font-size: 1em; font-weight: 600; color: #fff; background-color: #007bff; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.2s; }
+#ask-button:hover { background-color: #0056b3; }
+.qa-answer-box { background-color: #f8f9fa; padding: 15px; border-radius: 6px; border: 1px solid #eee; min-height: 50px; line-height: 1.7; color: #2c3e50; }
+#clause-input { width: 100%; min-height: 80px; margin-bottom: 10px; border: 1px solid #ccc; padding: 10px; font-size: 1em; border-radius: 6px; box-sizing: border-box; }
+#compare-button { padding: 10px 20px; font-size: 1em; font-weight: 600; color: #fff; background-color: #16a34a; border: none; border-radius: 6px; cursor: pointer; margin-bottom: 15px; }
+#compare-button:hover { background-color: #15803d; }
+
+/* Footer */
+footer { text-align: center; margin-top: 40px; color: #888; font-size: 0.9em; }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) { .side-by-side-container { flex-direction: column; } }
